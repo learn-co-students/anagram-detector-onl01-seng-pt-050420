@@ -10,15 +10,14 @@ class Anagram
 
     def match(anagrams)
         # return the matches in an array
-        
-        anagrams.reject {|match| 
-            if match != word.reverse
-                match
-            else
-                match
-            end
-        }
-        
+
+        anagrams.select { |match| 
+
+         # In here we can split, and sort "match", and compare it 
+         # to a splitted and sorted @name... if that makes sense.
+
+        match.split("").sort == word.split("").sort
+        }   
     end
 
 end
